@@ -10,8 +10,10 @@ module.exports = {
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
+      instance_var: 'INSTANCE_ID',
       env: {
-        NODE_ENV: 'development',
+        NODE_ENV: 'dev',
+        watch: true,
       },
       env_staging: {
         NODE_ENV: 'staging',

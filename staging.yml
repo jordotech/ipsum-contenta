@@ -2,8 +2,7 @@ version: '3.7'
 services:
   pm2:
     container_name: pm2
-    build: ./contentajs
-    #image: jordotech/ipsum_pm2:latest
+    image: jordotech/ipsum_pm2:latest
     volumes:
       - ${PWD}/contentajs:/app
     working_dir: /app

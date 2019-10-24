@@ -1,8 +1,10 @@
 FROM wodby/node:8.11-0.3.0
-WORKDIR /app
-RUN npm install
 USER root
-RUN npm install pm2 -g
-#CMD ["npm", "start"]
-#EXPOSE 3000
-#ENTRYPOINT npm start
+ADD . /app
+WORKDIR /app
+RUN whoami
+RUN npm install
+RUN ln -s /app/node_modules/.bin/pm2 /usr/bin
+RUN ln -s /app/node_modules/.bin/pm2-runtime /usr/bin
+ENTRYPOINT ["npm"]
+CMD ["start"]
