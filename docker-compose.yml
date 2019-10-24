@@ -1,19 +1,25 @@
-version: '3'
+version: '3.7'
 services:
   contentajs:
     container_name: contentajs
     build: ./contentajs
+    init: true
     volumes:
       - ./contentajs:/app
-    entrypoint: ["sh", "-c", "sleep 2073600"]
     working_dir: /app
+    entrypoint: ["sh", "-c", "sleep 2073600"]
     #entrypoint: ["npm", "start"]
+    #entrypoint: ["pm2-runtime", "./lib/server.js"]
     networks:
       - contenta
     ports:
       - "3000:3000"
+      - "9615:9615"
     depends_on:
       - php
+    environment:
+      - COLUMNS=150
+      - SHELL=/bin/bash
   nginx:
     container_name: contenta_nginx
     build: ./nginx
@@ -47,15 +53,19 @@ services:
     build: ./database
     ports:
       - "3306:3306"
+    environment:
+      - COLUMNS=150
+      - SHELL=/bin/bash
     volumes:
-      - data:/var/lib/mysql
+      - contenta_dbdata:/var/lib/mysql
+      - ./mariadb-init:/docker-entrypoint-initdb.d # Place init .sql file(s) here.
     env_file:
       - .env
     networks:
       - contenta
 
 volumes:
-  data:
+  contenta_dbdata:
 
 networks:
   contenta:

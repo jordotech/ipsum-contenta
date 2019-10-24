@@ -14,7 +14,7 @@ COPY conf/server.cnf /etc/my.cnf.d/server.cnf
 COPY docker-entrypoint /usr/local/bin/docker-entrypoint
 
 RUN yum install -y epel-release && \
-    yum install -y pwgen MariaDB-server MariaDB-client && \
+    yum install -y pwgen MariaDB-server MariaDB-client mysql-utilities && \
     yum clean all && \
     rm -rf /var/lib/mysql && \
     mkdir -p /var/lib/mysql /var/run/mysqld && \
@@ -24,8 +24,11 @@ RUN yum install -y epel-release && \
     fix-permissions /etc/my.cnf.d/ && \
     chmod +x /usr/local/bin/docker-entrypoint
 
+
 ### we cannot start mysql as root, we add the user mysql to the group root and change the user of the Docker Image to this user
 RUN usermod -G 0 --append mysql
+#USER root
+#RUN yum install -y mysql-utilities
 USER mysql
 
 VOLUME /var/lib/mysql
