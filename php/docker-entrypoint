@@ -30,6 +30,7 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $config_directories['sync'] = 'profiles/contrib/contenta_jsonapi/config/sync';
+$settings['hash_salt'] = getenv("HASH_SALT");
 EOF
     chmod 444 settings.php
 fi
