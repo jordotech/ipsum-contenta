@@ -16,6 +16,7 @@ SITE_NAME='Contenta CMS Demo'
 ACCOUNT_NAME=admin
 ACCOUNT_PASS=admin
 COMPOSER_MEMORY_LIMIT=-1
+HASH_SALT=1BXeRaOYo_hADQmUEwHuU7sysZbMA_ts3XhVV0hYpH7Fhem6CnXNZgVEvIkDcS0Yu1n2m-rlBA
 ```
 
 Then fire up docker compose:
