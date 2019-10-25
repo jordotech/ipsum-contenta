@@ -18,8 +18,7 @@ else
     composer config repositories.contenta_jsonapi path .
     cd web/sites/default
     chmod 777 settings.php
-    tee -a settings.php > /dev/null <<EOT
-
+    cat <<"EOF" >> settings.php
 $databases['default']['default'] = array (
   'database' => getenv("MYSQL_DATABASE"),
   'username' => getenv("MYSQL_USER"),
@@ -31,9 +30,7 @@ $databases['default']['default'] = array (
   'driver' => 'mysql',
 );
 $config_directories['sync'] = 'profiles/contrib/contenta_jsonapi/config/sync';
-
-
-EOT
+EOF
     chmod 444 settings.php
 fi
 
