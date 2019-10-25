@@ -1,4 +1,25 @@
 ## Firing up your local
+
+You'll need to create a `.env` file in the project root with the following values:
+
+```
+MYSQL_DATABASE=contenta
+MYSQL_USER=contenta
+MYSQL_PASSWORD=contenta
+MYSQL_ALLOW_EMPTY_PASSWORD=yes
+MYSQL_ROOT_PASSWORD=root
+MYSQL_HOSTNAME=database
+MYSQL_PORT=3306
+SITE_MAIL=admin@localhost
+ACCOUNT_MAIL=admin@localhost
+SITE_NAME='Contenta CMS Demo'
+ACCOUNT_NAME=admin
+ACCOUNT_PASS=admin
+COMPOSER_MEMORY_LIMIT=-1
+```
+
+Then fire up docker compose:
+
 `docker-compose up -d`
 
 ## The pm2 container...
