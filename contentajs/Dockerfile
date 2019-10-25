@@ -1,10 +1,8 @@
-FROM wodby/node:8.11-0.3.0
-USER root
+#FROM wodby/node:8.11-0.3.0
+FROM node:8.16.2-alpine
 ADD . /app
 WORKDIR /app
-RUN whoami
 RUN npm install
-RUN ln -s /app/node_modules/.bin/pm2 /usr/bin
-RUN ln -s /app/node_modules/.bin/pm2-runtime /usr/bin
+RUN npm audit fix
 ENTRYPOINT ["npm"]
 CMD ["start"]

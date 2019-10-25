@@ -2,16 +2,11 @@ version: '3.7'
 services:
   pm2:
     container_name: pm2
-    build: ./contentajs
-    #image: jordotech/ipsum_pm2:latest
-    volumes:
-      - ${PWD}/contentajs:/app
-    working_dir: /app
+    image: jordotech/ipsum_pm2:latest
     networks:
       - contenta
     ports:
       - "3000:3000"
-      - "9615:9615"
     depends_on:
       - php
   nginx:
