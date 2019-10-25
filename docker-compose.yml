@@ -40,7 +40,8 @@ services:
       - contenta
   database:
     container_name: db
-    build: ./database
+    #build: ./database
+    image: jordotech/ipsum_db:latest
     ports:
       - "3306:3306"
     environment:
