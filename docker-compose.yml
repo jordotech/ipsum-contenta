@@ -25,7 +25,8 @@ services:
       - php
   php:
     container_name: php
-    build: ./php
+    #build: ./php
+    image: jordotech/ipsum_php:latest
     ports:
       - "9000:9000"
     volumes:
