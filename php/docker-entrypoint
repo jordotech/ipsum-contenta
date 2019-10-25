@@ -13,7 +13,7 @@ else
     cd /usr/local/src
     git clone https://github.com/jordotech/contenta_jsonapi
     cd /usr/local/src/contenta_jsonapi
-    COMPOSER_MEMORY_LIMIT=-1 composer create-project contentacms/contenta-jsonapi-project /var/www/. --stability dev --no-progress --no-interaction
+    COMPOSER_MEMORY_LIMIT=-1 composer create-project contentacms/contenta-jsonapi-project /var/www/. --stability dev --no-interaction
     cd /var/www
     composer config repositories.contenta_jsonapi path .
     cd web/sites/default
