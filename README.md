@@ -7,11 +7,6 @@ http://localhost:3000/api/
 
 Otherwise, the slower api endpoint can be found from the php container at http://localhost:8181/api/
 
-As of 10/23 the nodejs container is not staying alive so we start it in sleep mode and manually start pm2 from within
-the container
-
-ssh into the container and run `npm start` or run `docker exec -it contentajs ./node_modules/.bin/pm2 start`
-
 ## Local DB
 
 If firing up the stack for the first time, the db container will automatically import `/mariadb-init/initial.sql`.
