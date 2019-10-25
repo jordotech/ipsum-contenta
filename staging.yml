@@ -3,19 +3,15 @@ services:
   pm2:
     container_name: pm2
     image: jordotech/ipsum_pm2:latest
-    volumes:
-      - ${PWD}/contentajs:/app
-    working_dir: /app
     networks:
       - contenta
     ports:
       - "3000:3000"
-      - "9615:9615"
     depends_on:
       - php
   nginx:
     container_name: nginx
-    build: ./nginx
+    build: ./docker/nginx
     ports:
       - "8181:80"
       - "443:443"
@@ -29,7 +25,8 @@ services:
       - php
   php:
     container_name: php
-    build: ./php
+    #build: ./docker/php
+    image: jordotech/ipsum_php:${PHP_IMG_TAG-latest}
     ports:
       - "9000:9000"
     volumes:
@@ -43,7 +40,8 @@ services:
       - contenta
   database:
     container_name: db
-    build: ./database
+    #build: ./database
+    image: jordotech/ipsum_db:latest
     ports:
       - "3306:3306"
     environment:
