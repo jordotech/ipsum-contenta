@@ -25,12 +25,15 @@ services:
       - php
   php:
     container_name: php
-    build: ./docker/php
+    #build: ./docker/php
+    build:
+      context: .
+      dockerfile: ./docker/php/LocalDockerfile
     #image: jordotech/ipsum_php:latest
     ports:
       - "9000:9000"
     volumes:
-      - ./www:/var/www:cached
+      - ./www:/var/www:delegated
     environment:
       - COLUMNS=150
       - SHELL=/bin/bash
