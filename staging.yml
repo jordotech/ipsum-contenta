@@ -25,7 +25,6 @@ services:
       - php
   php:
     container_name: php
-    #build: ./docker/php
     image: jordotech/ipsum_php:${PHP_IMG_TAG-latest}
     ports:
       - "9000:9000"
@@ -40,7 +39,6 @@ services:
       - contenta
   database:
     container_name: db
-    #build: ./database
     image: jordotech/ipsum_db:latest
     ports:
       - "3306:3306"
