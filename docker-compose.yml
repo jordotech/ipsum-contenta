@@ -25,11 +25,9 @@ services:
       - php
   php:
     container_name: php
-    #build: ./docker/php
     build:
       context: .
       dockerfile: ./docker/php/LocalDockerfile
-    #image: jordotech/ipsum_php:latest
     ports:
       - "9000:9000"
     volumes:
@@ -43,8 +41,8 @@ services:
       - contenta
   database:
     container_name: db
-    #build: ./database
-    image: jordotech/ipsum_db:latest
+    build: ./docker/database
+    #image: jordotech/ipsum_db:latest
     ports:
       - "3306:3306"
     environment:
