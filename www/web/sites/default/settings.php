@@ -787,5 +787,5 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$config_directories['sync'] = 'profiles/contrib/contenta_jsonapi/config/sync';
+$config_directories['sync'] = getenv("CONFIG_SYNC_DIRECTORY");
 $settings['hash_salt'] = getenv("HASH_SALT");
