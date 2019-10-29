@@ -1,0 +1,6 @@
+www/vendor
+www/web/core
+#www/web/modules/contrib
+mariadb-init
+docker
+.git

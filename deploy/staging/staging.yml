@@ -11,27 +11,25 @@ services:
       - php
   nginx:
     container_name: nginx
-    build: ./docker/nginx
+    image: jordotech/ipsum_nginx:latest
     ports:
       - "8181:80"
       - "443:443"
     networks:
       - contenta
     volumes:
-      - ./www:/var/www:cached
+      - www_data:/var/www:ro
     # this ensures that nginx's upstream host "php" will always have
     # valid DNS when we're starting up
     depends_on:
       - php
   php:
     container_name: php
-    build:
-      context: .
-      dockerfile: ./docker/php/LocalDockerfile
+    image: jordotech/ipsum_php:${PHP_IMG_TAG-latest}
     ports:
       - "9000:9000"
     volumes:
-      - ./www:/var/www:delegated
+      - www_data:/var/www
     environment:
       - COLUMNS=150
       - SHELL=/bin/bash
@@ -41,8 +39,7 @@ services:
       - contenta
   database:
     container_name: db
-    build: ./docker/database
-    #image: jordotech/ipsum_db:latest
+    image: jordotech/ipsum_db:latest
     ports:
       - "3306:3306"
     environment:
@@ -58,6 +55,7 @@ services:
 
 volumes:
   contenta_dbdata:
+  www_data:
 
 networks:
   contenta:

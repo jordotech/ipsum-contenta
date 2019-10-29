@@ -1,0 +1,38 @@
+#!/bin/bash
+
+ep /etc/php.ini
+ep /etc/php-fpm.conf
+ep /etc/php-fpm.d/*
+
+[ ! -e /run/php-fpm ] && mkdir -p /run/php-fpm
+
+if [ "$(ls -A /var/www/)" ]; then
+    echo "Contenta already installed, please update manually if you need to."
+else
+    echo "Installing contenta"
+    cd /usr/local/src
+    git clone https://github.com/jordotech/contenta_jsonapi
+    cd /usr/local/src/contenta_jsonapi
+    COMPOSER_MEMORY_LIMIT=-1 composer create-project contentacms/contenta-jsonapi-project /var/www/. --stability dev --no-interaction
+    cd /var/www
+    composer config repositories.contenta_jsonapi path .
+    cd web/sites/default
+    chmod 777 settings.php
+    cat <<"EOF" >> settings.php
+$databases['default']['default'] = array (
+  'database' => getenv("MYSQL_DATABASE"),
+  'username' => getenv("MYSQL_USER"),
+  'password' => getenv("MYSQL_PASSWORD"),
+  'prefix' => '',
+  'host' => getenv("MYSQL_HOSTNAME"),
+  'port' => getenv("MYSQL_PORT"),
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+);
+$config_directories['sync'] = getenv("CONFIG_SYNC_DIRECTORY");
+$settings['hash_salt'] = getenv("HASH_SALT");
+EOF
+    chmod 444 settings.php
+fi
+
+exec "$@"
