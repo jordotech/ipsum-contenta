@@ -5,6 +5,7 @@ module:
   ckeditor: 0
   comment: 0
   config: 0
+  config_translation: 0
   consumer_image_styles: 0
   consumers: 0
   contenta_enhancements: 0
@@ -30,6 +31,7 @@ module:
   jsonrpc_discovery: 0
   language: 0
   link: 0
+  locale: 0
   media: 0
   media_library: 0
   menu_ui: 0
@@ -61,6 +63,7 @@ module:
   views: 0
   views_ui: 0
   menu_link_content: 1
+  content_translation: 10
   contenta_jsonapi: 1000
 theme:
   stable: 0
