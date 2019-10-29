@@ -9,6 +9,8 @@ services:
       - "3000:3000"
     depends_on:
       - php
+    volumes:
+      - ./local.yml:/app/config/local.yml
   nginx:
     container_name: nginx
     image: jordotech/ipsum_nginx:latest
