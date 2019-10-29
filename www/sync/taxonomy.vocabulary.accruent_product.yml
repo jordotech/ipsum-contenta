@@ -1,0 +1,8 @@
+uuid: 7c06115b-5949-4f96-a637-dbe5e05057d5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Accruent Product'
+vid: accruent_product
+description: ''
+weight: 0

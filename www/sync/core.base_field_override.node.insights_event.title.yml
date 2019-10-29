@@ -1,0 +1,18 @@
+uuid: 2c89e1dd-36aa-43e7-8b10-527ddac6026d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.insights_event
+id: node.insights_event.title
+field_name: title
+entity_type: node
+bundle: insights_event
+label: 'Event Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

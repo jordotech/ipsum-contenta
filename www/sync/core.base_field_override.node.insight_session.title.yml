@@ -1,0 +1,18 @@
+uuid: 0a4f6045-57d5-4e33-bc79-edcf9c569c0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.insight_session
+id: node.insight_session.title
+field_name: title
+entity_type: node
+bundle: insight_session
+label: 'Session Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

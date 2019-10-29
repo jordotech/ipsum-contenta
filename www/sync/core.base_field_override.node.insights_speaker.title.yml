@@ -1,0 +1,18 @@
+uuid: 2d4724cc-0d20-4cc0-8f9c-ae0e844adce4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.insights_speaker
+id: node.insights_speaker.title
+field_name: title
+entity_type: node
+bundle: insights_speaker
+label: 'Speaker Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

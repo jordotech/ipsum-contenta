@@ -1,0 +1,48 @@
+uuid: 4a4c0089-62a8-4c9d-88c4-bb0c9f805af7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.insights_event.body
+    - field.field.node.insights_event.event_date
+    - node.type.insights_event
+  module:
+    - datetime
+    - text
+    - user
+id: node.insights_event.default
+targetEntityType: node
+bundle: insights_event
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  event_date:
+    weight: 102
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

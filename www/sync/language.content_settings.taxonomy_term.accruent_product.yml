@@ -1,0 +1,16 @@
+uuid: bec85500-7b3c-4e13-b82e-22be82d4f984
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.accruent_product
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.accruent_product
+target_entity_type_id: taxonomy_term
+target_bundle: accruent_product
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,26 @@
+uuid: 483dee0e-b1c6-489c-81ab-9194b2f7690e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.start_end_times
+    - node.type.insight_session
+  module:
+    - datetime_range
+id: node.insight_session.start_end_times
+field_name: start_end_times
+entity_type: node
+bundle: insight_session
+label: 'Session begin & end times'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: now
+    default_end_date: now
+default_value_callback: ''
+settings: {  }
+field_type: daterange

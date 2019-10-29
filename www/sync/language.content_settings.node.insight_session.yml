@@ -1,0 +1,11 @@
+uuid: 1c882a06-de85-4091-bf01-7d7e4d3d7627
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.insight_session
+id: node.insight_session
+target_entity_type_id: node
+target_bundle: insight_session
+default_langcode: site_default
+language_alterable: false

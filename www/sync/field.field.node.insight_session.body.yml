@@ -1,0 +1,22 @@
+uuid: af4941e4-ef23-475e-962a-3ecef94b3555
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.insight_session
+  module:
+    - text
+id: node.insight_session.body
+field_name: body
+entity_type: node
+bundle: insight_session
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

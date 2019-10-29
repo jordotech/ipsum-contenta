@@ -1,0 +1,11 @@
+uuid: 0a938157-6d19-46d5-84f1-72a9d1b98e7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.insights_speaker
+id: node.insights_speaker
+target_entity_type_id: node
+target_bundle: insights_speaker
+default_langcode: site_default
+language_alterable: false

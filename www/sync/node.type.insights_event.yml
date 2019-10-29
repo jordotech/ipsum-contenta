@@ -1,0 +1,18 @@
+uuid: 02104df2-b02f-48e1-9aa9-c64daa7b49a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Event
+type: insights_event
+description: 'Insights Event consisting of speakers, sponsors, sessions and has a date and location.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

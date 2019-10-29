@@ -1,0 +1,39 @@
+uuid: b9832713-5031-4479-ae20-0bf6a0e8f88f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.insight_session.body
+    - node.type.insight_session
+  module:
+    - text
+    - user
+id: node.insight_session.teaser
+targetEntityType: node
+bundle: insight_session
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

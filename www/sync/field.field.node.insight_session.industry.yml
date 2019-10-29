@@ -1,0 +1,29 @@
+uuid: d874c293-4ac9-44b6-8cb4-6f19b515b88f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.industry
+    - node.type.insight_session
+    - taxonomy.vocabulary.industry
+id: node.insight_session.industry
+field_name: industry
+entity_type: node
+bundle: insight_session
+label: Industry
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      industry: industry
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

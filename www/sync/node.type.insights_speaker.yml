@@ -1,0 +1,18 @@
+uuid: dc54c11a-c4f8-4fc2-848b-8ed1d5411c28
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Speaker
+type: insights_speaker
+description: 'A speaker that will be present at an Insights Event'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

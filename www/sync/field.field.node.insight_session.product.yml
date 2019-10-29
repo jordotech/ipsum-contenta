@@ -1,0 +1,29 @@
+uuid: cbf1d4f5-4b5b-4d7d-8549-30095bdeb2b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.product
+    - node.type.insight_session
+    - taxonomy.vocabulary.accruent_product
+id: node.insight_session.product
+field_name: product
+entity_type: node
+bundle: insight_session
+label: Product
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      accruent_product: accruent_product
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

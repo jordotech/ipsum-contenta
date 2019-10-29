@@ -1,0 +1,39 @@
+uuid: a2a23475-29c5-4b8f-b985-02a4bd63a6a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.insights_event.body
+    - node.type.insights_event
+  module:
+    - text
+    - user
+id: node.insights_event.teaser
+targetEntityType: node
+bundle: insights_event
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

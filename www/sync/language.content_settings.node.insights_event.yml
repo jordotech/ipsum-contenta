@@ -1,0 +1,11 @@
+uuid: 7183a77d-f009-4941-aaf0-b52cf2abdb7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.insights_event
+id: node.insights_event
+target_entity_type_id: node
+target_bundle: insights_event
+default_langcode: site_default
+language_alterable: false

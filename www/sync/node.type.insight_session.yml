@@ -1,0 +1,18 @@
+uuid: 031924b0-c143-478e-96d3-eec29280d1ec
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Session
+type: insight_session
+description: 'An individual session during an Insights Event'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

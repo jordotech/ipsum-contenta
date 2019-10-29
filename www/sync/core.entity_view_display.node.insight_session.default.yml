@@ -1,0 +1,67 @@
+uuid: 6e35b612-a864-4ba7-b79a-1511d6d9d0f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.insight_session.body
+    - field.field.node.insight_session.industry
+    - field.field.node.insight_session.product
+    - field.field.node.insight_session.start_end_times
+    - node.type.insight_session
+  module:
+    - datetime_range
+    - text
+    - user
+id: node.insight_session.default
+targetEntityType: node
+bundle: insight_session
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  industry:
+    weight: 103
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  product:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  start_end_times:
+    weight: 102
+    label: above
+    settings:
+      separator: '-'
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

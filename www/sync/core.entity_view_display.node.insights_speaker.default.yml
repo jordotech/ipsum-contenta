@@ -1,0 +1,48 @@
+uuid: 6bc178ba-2c69-4618-9cfe-2109e22d944b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.insights_speaker.body
+    - field.field.node.insights_speaker.speaker_headshot
+    - node.type.insights_speaker
+  module:
+    - image
+    - text
+    - user
+id: node.insights_speaker.default
+targetEntityType: node
+bundle: insights_speaker
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  speaker_headshot:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
