@@ -6,3 +6,4 @@ token
 *.tfplan
 *.tfplan.backup*
 .env-*
+deploy/terraform
