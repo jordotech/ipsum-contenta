@@ -32,6 +32,7 @@ services:
       - "9000:9000"
     volumes:
       - ./www:/var/www:delegated
+      - ./docker/php/.bashrc:/home/.bashrc
     environment:
       - COLUMNS=150
       - SHELL=/bin/bash

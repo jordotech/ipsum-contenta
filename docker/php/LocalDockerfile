@@ -1,8 +1,6 @@
 FROM jordotech/ipsum_php_base:latest
 
 ENTRYPOINT ["docker-entrypoint"]
-RUN echo -e "\nalias drush='/var/www/vendor/drush/drush/drush'" >> /home/.bashrc
-RUN echo -e "\nalias drupal='/var/www/vendor/drupal/console/bin/drupal'" >> /home/.bashrc
 
 # Run PHP-FPM on container start.
 CMD ["/usr/sbin/php-fpm", "-F", "-R"]
