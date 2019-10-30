@@ -62,5 +62,4 @@ RUN mkdir -p /var/www  && \
     chmod +x /usr/local/bin/docker-entrypoint
 
 WORKDIR /var/www
-RUN echo -e "\nPS1='\w\$ '" >> ~/.bashrc
 EXPOSE 9000

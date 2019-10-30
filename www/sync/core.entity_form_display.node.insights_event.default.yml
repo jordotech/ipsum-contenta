@@ -12,6 +12,7 @@ dependencies:
   module:
     - address
     - datetime
+    - inline_entity_form
     - path
     - text
 id: node.insights_event.default
@@ -49,11 +50,14 @@ content:
   event_day_schedule:
     weight: 125
     settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      override_labels: false
+      collapsible: false
+      collapsed: false
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: inline_entity_form_simple
     region: content
   langcode:
     type: language_select
@@ -77,12 +81,9 @@ content:
     third_party_settings: {  }
   speakers:
     weight: 124
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   status:
     type: boolean_checkbox

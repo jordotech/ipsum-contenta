@@ -1,0 +1,18 @@
+uuid: bf7984ea-ccf3-401d-9067-88c501c677db
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event_time_slot
+id: node.event_time_slot.title
+field_name: title
+entity_type: node
+bundle: event_time_slot
+label: Activity
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

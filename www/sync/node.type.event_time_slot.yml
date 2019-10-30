@@ -6,13 +6,12 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
 name: 'Event Time Slot'
 type: event_time_slot
-description: ''
+description: 'Represents a single time slot in an Event''s Day Schedule'
 help: ''
-new_revision: true
-preview_mode: 1
-display_submitted: true
+new_revision: false
+preview_mode: 0
+display_submitted: false
