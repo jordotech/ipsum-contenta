@@ -1,0 +1,28 @@
+uuid: c0e45282-70d3-48b9-a318-16b61b1247d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sponsor_tier
+  module:
+    - user
+id: node.sponsor_tier.default
+targetEntityType: node
+bundle: sponsor_tier
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

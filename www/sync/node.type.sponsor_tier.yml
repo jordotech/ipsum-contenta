@@ -1,0 +1,17 @@
+uuid: 2f96d49c-5860-43a7-90d4-f5843e294164
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Sponsor Tier'
+type: sponsor_tier
+description: 'Represents a level within a Sponsor Tier Group'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

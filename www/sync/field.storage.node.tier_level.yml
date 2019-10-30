@@ -1,0 +1,19 @@
+uuid: 9210b3ad-130d-48e5-a115-5ee065248ce1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.tier_level
+field_name: tier_level
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

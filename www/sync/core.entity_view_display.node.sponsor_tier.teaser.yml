@@ -1,0 +1,29 @@
+uuid: 06f23951-6897-487f-bc5f-0ae099bf2091
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.sponsor_tier
+  module:
+    - user
+id: node.sponsor_tier.teaser
+targetEntityType: node
+bundle: sponsor_tier
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

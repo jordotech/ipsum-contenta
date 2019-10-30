@@ -1,0 +1,18 @@
+uuid: 33a7f806-256c-415d-8044-e6ba2232f92e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sponsor_tier_group
+id: node.sponsor_tier_group.title
+field_name: title
+entity_type: node
+bundle: sponsor_tier_group
+label: 'Tier Group Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

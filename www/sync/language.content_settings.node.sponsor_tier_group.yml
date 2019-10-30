@@ -1,0 +1,11 @@
+uuid: 7770b63f-360f-4aa5-932b-a3188b3a5d4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sponsor_tier_group
+id: node.sponsor_tier_group
+target_entity_type_id: node
+target_bundle: sponsor_tier_group
+default_langcode: site_default
+language_alterable: false

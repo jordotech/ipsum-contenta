@@ -1,0 +1,22 @@
+uuid: 14037377-ce14-4174-90d5-b92482353868
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sponsor_tier_group
+id: node.sponsor_tier_group.promote
+field_name: promote
+entity_type: node
+bundle: sponsor_tier_group
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

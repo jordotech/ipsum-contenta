@@ -1,0 +1,37 @@
+uuid: e41778c8-92b8-4cea-91b9-ebcd932ead5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sponsor_tier_group.tier_level
+    - node.type.sponsor_tier_group
+  module:
+    - user
+id: node.sponsor_tier_group.default
+targetEntityType: node
+bundle: sponsor_tier_group
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  tier_level:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

@@ -1,0 +1,28 @@
+uuid: 85f82a63-2946-418e-b208-63fad6bf7d1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.tier_level
+    - node.type.sponsor_tier
+    - node.type.sponsor_tier_group
+id: node.sponsor_tier_group.tier_level
+field_name: tier_level
+entity_type: node
+bundle: sponsor_tier_group
+label: 'Tier Level'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sponsor_tier: sponsor_tier
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

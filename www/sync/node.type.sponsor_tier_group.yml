@@ -1,0 +1,17 @@
+uuid: a3099a92-de76-4d72-8cc7-6bf8e30ddfc1
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Sponsor Tier Group'
+type: sponsor_tier_group
+description: 'Every Insights Event has a unique theme and event sponsors are ranked by ''tier'' within that theme''s tier group.  For example the theme might be metals where the top tier is "Platinum" and the lowest tier is "Bronze".'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

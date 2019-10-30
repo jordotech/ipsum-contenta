@@ -1,0 +1,58 @@
+uuid: 3c345f4e-1c63-4732-9ee0-bf4455814ee9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sponsor_tier_group.tier_level
+    - node.type.sponsor_tier_group
+  module:
+    - inline_entity_form
+id: node.sponsor_tier_group.default
+targetEntityType: node
+bundle: sponsor_tier_group
+mode: default
+content:
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 3
+    region: content
+    third_party_settings: {  }
+  tier_level:
+    weight: 1
+    settings:
+      form_mode: default
+      label_singular: ''
+      label_plural: ''
+      collapsible: true
+      collapsed: true
+      allow_new: true
+      allow_existing: true
+      match_operator: CONTAINS
+      override_labels: false
+      allow_duplicate: false
+    third_party_settings: {  }
+    type: inline_entity_form_complex
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true
