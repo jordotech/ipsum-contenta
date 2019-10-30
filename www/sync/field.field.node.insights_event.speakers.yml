@@ -1,0 +1,28 @@
+uuid: 7012bfac-3434-42d7-a010-6f4ec9937e11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.speakers
+    - node.type.insights_event
+    - node.type.insights_speaker
+id: node.insights_event.speakers
+field_name: speakers
+entity_type: node
+bundle: insights_event
+label: Speakers
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      insights_speaker: insights_speaker
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

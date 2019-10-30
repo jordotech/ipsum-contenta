@@ -1,0 +1,33 @@
+uuid: fea5f4c5-5787-4a3d-bbd5-1c4f18ee103e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event_time_slot.start
+    - field.field.node.event_time_slot.time_slot_image
+    - node.type.event_time_slot
+  module:
+    - user
+id: node.event_time_slot.teaser
+targetEntityType: node
+bundle: event_time_slot
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  start: true
+  time_slot_image: true

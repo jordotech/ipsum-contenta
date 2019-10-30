@@ -1,0 +1,37 @@
+uuid: 4065be1a-e68a-411e-bc39-87c98a12b8a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.event_day_schedule.time_slots
+    - node.type.event_day_schedule
+  module:
+    - user
+id: node.event_day_schedule.default
+targetEntityType: node
+bundle: event_day_schedule
+mode: default
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  time_slots:
+    weight: 101
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

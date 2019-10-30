@@ -1,0 +1,28 @@
+uuid: 8e1c0058-cdab-4761-b41e-12e18db019cb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.event_day_schedule
+    - node.type.event_day_schedule
+    - node.type.insights_event
+id: node.insights_event.event_day_schedule
+field_name: event_day_schedule
+entity_type: node
+bundle: insights_event
+label: 'Event Day Schedule'
+description: 'Each one selected represents a list of time slots'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      event_day_schedule: event_day_schedule
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

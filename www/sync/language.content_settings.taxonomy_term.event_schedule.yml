@@ -1,0 +1,11 @@
+uuid: 18b6020e-1ae3-4ce9-a531-d74bf413ad8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.event_schedule
+id: taxonomy_term.event_schedule
+target_entity_type_id: taxonomy_term
+target_bundle: event_schedule
+default_langcode: site_default
+language_alterable: false

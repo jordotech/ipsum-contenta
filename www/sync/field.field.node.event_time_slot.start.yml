@@ -1,0 +1,26 @@
+uuid: 73c88f4d-86b0-4fb7-9023-f936488b9f74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.start
+    - node.type.event_time_slot
+  module:
+    - datetime_range
+id: node.event_time_slot.start
+field_name: start
+entity_type: node
+bundle: event_time_slot
+label: 'start end times'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: now
+    default_end_date: now
+default_value_callback: ''
+settings: {  }
+field_type: daterange

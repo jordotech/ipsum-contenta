@@ -1,0 +1,11 @@
+uuid: b5f99277-c37e-4ef7-bf42-e49280f740d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event_time_slot
+id: node.event_time_slot
+target_entity_type_id: node
+target_bundle: event_time_slot
+default_langcode: site_default
+language_alterable: false

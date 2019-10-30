@@ -1,0 +1,11 @@
+uuid: f81e4ce8-66e0-4938-b1a7-49ac80d9aad2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.event_day_schedule
+id: node.event_day_schedule
+target_entity_type_id: node
+target_bundle: event_day_schedule
+default_langcode: site_default
+language_alterable: false

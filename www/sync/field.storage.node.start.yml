@@ -1,0 +1,20 @@
+uuid: 65221228-073a-4ecf-ac97-8d8609506595
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - node
+id: node.start
+field_name: start
+entity_type: node
+type: daterange
+settings:
+  datetime_type: datetime
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

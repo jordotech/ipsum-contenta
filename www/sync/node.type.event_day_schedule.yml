@@ -1,0 +1,18 @@
+uuid: 14188ee1-cafc-4f28-8ed1-9fc095ca673c
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Event Day Schedule'
+type: event_day_schedule
+description: 'A list of start-end times during the day for an event'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

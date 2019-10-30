@@ -3,10 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.insights_event.address
     - field.field.node.insights_event.body
     - field.field.node.insights_event.event_date
+    - field.field.node.insights_event.event_day_schedule
+    - field.field.node.insights_event.speakers
     - node.type.insights_event
   module:
+    - address
     - datetime
     - text
     - user
@@ -15,6 +19,13 @@ targetEntityType: node
 bundle: insights_event
 mode: default
 content:
+  address:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
   body:
     label: hidden
     type: text_default
@@ -31,10 +42,26 @@ content:
     third_party_settings: {  }
     type: datetime_default
     region: content
+  event_day_schedule:
+    weight: 105
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
+    region: content
+  speakers:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   title:
     label: hidden

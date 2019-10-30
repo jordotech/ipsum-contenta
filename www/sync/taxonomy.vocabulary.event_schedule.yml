@@ -1,0 +1,8 @@
+uuid: f1479791-9dae-48a0-a308-773cabd2bae0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event Schedule'
+vid: event_schedule
+description: ''
+weight: 0

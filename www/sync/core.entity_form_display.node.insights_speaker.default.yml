@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.insights_speaker.body
+    - field.field.node.insights_speaker.company
+    - field.field.node.insights_speaker.position
     - field.field.node.insights_speaker.speaker_headshot
     - image.style.thumbnail
     - node.type.insights_speaker
@@ -25,6 +27,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  company:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   created:
     type: datetime_timestamp
     weight: 10
@@ -44,6 +54,14 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  position:
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
   promote:
     type: boolean_checkbox
     settings:

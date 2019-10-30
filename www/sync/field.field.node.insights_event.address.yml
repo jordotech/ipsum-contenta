@@ -1,0 +1,51 @@
+uuid: 905b00a6-c546-4180-86ac-bc06dc4fa8f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.address
+    - node.type.insights_event
+  module:
+    - address
+id: node.insights_event.address
+field_name: address
+entity_type: node
+bundle: insights_event
+label: Address
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    country_code: US
+    langcode: en
+    given_name: ''
+    family_name: ''
+    organization: ''
+    address_line1: ''
+    address_line2: ''
+    locality: ''
+    administrative_area: ''
+    postal_code: ''
+    additional_name: null
+    sorting_code: null
+    dependent_locality: null
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    givenName:
+      override: hidden
+    additionalName:
+      override: hidden
+    familyName:
+      override: hidden
+    organization:
+      override: hidden
+    sortingCode:
+      override: hidden
+    dependentLocality:
+      override: hidden
+  fields: {  }
+field_type: address

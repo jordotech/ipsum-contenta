@@ -1,53 +1,30 @@
-uuid: 403fbf72-58d0-42b6-abbc-44329edc1a11
+uuid: b63174c0-af54-41f1-8627-39a2ea9bee2e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.insights_event.address
-    - field.field.node.insights_event.body
-    - field.field.node.insights_event.event_date
-    - field.field.node.insights_event.event_day_schedule
-    - field.field.node.insights_event.speakers
-    - node.type.insights_event
+    - field.field.node.event_time_slot.event_schedule_day
+    - field.field.node.event_time_slot.start
+    - field.field.node.event_time_slot.time_slot_image
+    - image.style.thumbnail
+    - node.type.event_time_slot
   module:
-    - address
-    - datetime
+    - datetime_range
+    - image
     - path
-    - text
-id: node.insights_event.default
+id: node.event_time_slot.default
 targetEntityType: node
-bundle: insights_event
+bundle: event_time_slot
 mode: default
 content:
-  address:
-    weight: 123
-    settings: {  }
-    third_party_settings: {  }
-    type: address_default
-    region: content
-  body:
-    type: text_textarea_with_summary
-    weight: 121
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-    third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
-  event_date:
-    weight: 122
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
-  event_day_schedule:
-    weight: 125
+  event_schedule_day:
+    weight: 124
     settings:
       match_operator: CONTAINS
       size: 60
@@ -75,14 +52,11 @@ content:
     weight: 15
     region: content
     third_party_settings: {  }
-  speakers:
-    weight: 124
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+  start:
+    weight: 122
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: daterange_default
     region: content
   status:
     type: boolean_checkbox
@@ -98,6 +72,14 @@ content:
     weight: 16
     region: content
     third_party_settings: {  }
+  time_slot_image:
+    weight: 123
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
   title:
     type: string_textfield
     weight: -5

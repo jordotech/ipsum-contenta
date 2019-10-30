@@ -1,0 +1,29 @@
+uuid: 6b6c2765-b28e-4698-a2d6-f6003da04cfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.event_day_schedule
+  module:
+    - user
+id: node.event_day_schedule.teaser
+targetEntityType: node
+bundle: event_day_schedule
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true
