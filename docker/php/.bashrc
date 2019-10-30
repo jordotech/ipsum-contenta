@@ -97,5 +97,5 @@ fi
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
-PS1='\[\033[0;31m\](LOCAL IPSUM) \u \w \[\033[m\]$';
-
+PS1='\[\033[0;35m\](LOCAL IPSUM) \u \w \[\033[m\]$';
+alias drush='/var/www/vendor/drush/drush/drush'
